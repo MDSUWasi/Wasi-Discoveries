@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders & Disclaimers - Wasi-Discoveries</title>
+    <style>
+        
+        :root {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-primary: #1c1e21;
+            --text-secondary: #65676b;
+            --accent-blue: #1877f2;
+            --warning-red: #e74c3c;
+            --warning-bg: #fdf2f2;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #18191a;
+            --card-bg: #242526;
+            --text-primary: #e4e6eb;
+            --text-secondary: #b0b3b8;
+            --accent-blue: #459df5;
+            --warning-red: #ff6b6b;
+            --warning-bg: #2d1b1b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 5px solid var(--warning-red);
+        }
+
+        h1 {
+            color: var(--warning-red);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Warning Box Styles */
+        .warning-box {
+            background: var(--warning-bg);
+            border: 1px solid var(--warning-red);
+            border-left: 5px solid var(--warning-red);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+
+        .warning-box h3 {
+            color: var(--warning-red);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .warning-icon {
+            font-size: 1.5rem;
+        }
+
+        .mandatory-read {
+            background: rgba(24, 119, 242, 0.1);
+            border-left: 4px solid var(--accent-blue);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .mandatory-read a {
+            color: var(--accent-blue);
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>⚠️ Important Reminders & Disclaimers</h1>
+        
+        <div class="mandatory-read">
+            <strong>⚠️ Mandatory Reading:</strong> 
+            Before proceeding, you <strong>MUST</strong> read the 
+            <a href="terms.html">Terms of Condition</a> and 
+            <a href="privacy.html">Privacy Policy</a>. 
+            By using this site, you agree to these terms.
+        </div>
+
+        <p>Welcome to <strong>Wasi's Discoveries</strong>. This is an educational portfolio showcasing scientific concepts, experiments, and theories. While our goal is to inspire and educate, please read the following warnings carefully.</p>
+
+        <div class="warning-box">
+            <h3><span class="warning-icon">🚫</span> Educational Level Warning</h3>
+            <p>The content on this website is designed for <strong>advanced students</strong> (A-Level, IB, Undergraduate, and beyond). It assumes a strong foundation in mathematics and physics.</p>
+            <ul>
+                <li><strong>Not for Beginners:</strong> Concepts such as Quantum Mechanics, Advanced Calculus, and Rocket Propulsion are explained at a level suitable for students who have completed high school physics (Class 11/12 or equivalent).</li>
+                <li><strong>Prior Knowledge Required:</strong> If you are below Class 11, you may find the mathematical derivations and theoretical explanations difficult to understand without prior guidance.</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h3><span class="warning-icon">⚗️</span> Safety Warning: Experiments</h3>
+            <p><strong>DO NOT attempt any experiments described on this website without professional supervision.</strong></p>
+            <p>Many scientific demonstrations involve hazardous materials, high voltages, extreme temperatures, or pressurized systems. <strong>I am not a licensed instructor, and this website is not a laboratory manual.</strong></p>
+            <ul>
+                <li><strong>Professional Supervision:</strong> Always perform experiments under the guidance of a qualified teacher or scientist in a controlled environment.</li>
+                <li><strong>Personal Responsibility:</strong> Attempting these experiments without proper safety gear (goggles, gloves, fume hoods) and supervision is <strong>extremely dangerous</strong>. Anyone must do experiment under the guidance of a qualified teacher or scientist in a controlled environment. </li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <h3><span class="warning-icon">⚖️</span> Limitation of Liability</h3>
+            <p><strong>By using this website, you explicitly agree that:</strong></p>
+            <ol>
+                <li>You are using the information for <strong>educational purposes only</strong>.</li>
+                <li>You understand that the content may not be suitable for your current academic level.</li>
+                <li>You will not attempt any experiments without proper safety measures and supervision.</li>
+            </ol>
+            <p><strong>If you choose to ignore these warnings and attempt experiments, use the information incorrectly, or suffer any injury, loss, or damage, it is solely your responsibility.</strong> Wasi and this website accept <strong>NO LIABILITY</strong> for any consequences resulting from the use of this information.</p>
+        </div>
+
+        <h2>Final Notice</h2>
+        <p>Science is a powerful tool, but it requires respect and caution. If you are not ready for advanced material or cannot ensure safety, please wait until you are older or seek guidance from a professional educator.</p>
+
+        <p><strong>By continuing to browse this site, you confirm that you have read, understood, and agreed to these Reminders, the Terms of Condition, and the Privacy Policy.</strong></p>
+
+        <a href="index.html" class="back-link">← I Agree & Return to Home</a>
+    </div>
+
+</body>
+</html>

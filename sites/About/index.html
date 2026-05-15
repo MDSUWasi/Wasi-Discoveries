@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Wasi's Discoveries</title>
+    
+    <!-- Reusing your portfolio styles -->
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/sidebar-left.css">
+    <link rel="stylesheet" href="../../css/sidebar-right.css">
+    <link rel="stylesheet" href="../../css/print.css" media="print">
+
+    <style>
+        /* Specific styles for the About page content */
+        .about-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+
+        .profile-role {
+            font-size: 1.2rem;
+            color: var(--accent-blue);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .contact-card h4 {
+            margin-bottom: 5px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .contact-card a, .contact-card span {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+            word-break: break-all;
+        }
+
+        .bio-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        .bio-section h2 {
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-color);
+            padding-bottom: 10px;
+        }
+
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .interest-item {
+            background: var(--bg-color);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-primary);
+            border: 1px solid #ddd;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 600px) {
+            .profile-name { font-size: 2rem; }
+            .about-container { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="about-container">
+        <!-- Header -->
+        <div class="profile-header">
+            <h1 class="profile-name">Md. Shafi Un Wasi</h1>
+            <p class="profile-role">Science Student & Aspiring Researcher</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-grid">
+            <div class="contact-card">
+                <h4>Email</h4>
+                <a href="mailto:shafiun.wasi@outlook.com">shafiun.wasi@outlook.com</a>
+            </div>
+            <div class="contact-card">
+                <h4>LinkedIn</h4>
+                <!-- Replace # with your actual profile URL -->
+                <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank">Connect on LinkedIn</a>
+            </div>
+            <div class="contact-card">
+                <h4>GitHub</h4>
+                <!-- Replace # with your actual profile URL -->
+                <a href="https://github.com/YOUR_USERNAME" target="_blank">View Code</a>
+            </div>
+            <div class="contact-card">
+                <h4>WhatsApp</h4>
+                <span style="color: var(--text-secondary); font-size: 0.9rem;">Message Only<br>(No Calls)</span>
+            </div>
+        </div>
+
+        <!-- Biography -->
+        <div class="bio-section">
+            <h2>My Journey</h2>
+            <p>
+                I am a dedicated student currently pursuing my A-Levels with a deep passion for the sciences. 
+                My academic focus lies in <strong>Physics, Chemistry, and Mathematics</strong>, where I strive to understand the fundamental laws that govern our universe.
+            </p>
+            <p>
+                Beyond the classroom, I have a strong curiosity for <strong>Astronomy</strong> and <strong>Computer Science</strong>. 
+                Astronomy fuels my wonder about the cosmos, while Computer Science allows me to build tools and simulations to explore these concepts further. 
+                I enjoy learning beyond the standard syllabus, often diving into advanced topics like quantum mechanics and rocket propulsion.
+            </p>
+            <p>
+                This website, <strong>Wasi's Discoveries</strong>, is my personal laboratory. It is where I document my findings, share my essays, and experiment with interactive physics simulations. 
+                It represents my commitment to privacy, open science, and ethical technology.
+            </p>
+        </div>
+
+        <!-- Interests -->
+        <div class="bio-section">
+            <h2>Core Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-item">🔭 Astronomy</div>
+                <div class="interest-item">⚛️ Quantum Physics</div>
+                <div class="interest-item">🧪 Chemistry</div>
+                <div class="interest-item">💻 Computer Science</div>
+                <div class="interest-item">🚀 Rocketry</div>
+                <div class="interest-item">📐 Mathematics</div>
+            </div>
+        </div>
+
+        <a href="../../index.html" class="back-link">← Back to Home</a>
+    </div>
+
+</body>
+</html>

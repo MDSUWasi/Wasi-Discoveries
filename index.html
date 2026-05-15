@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasi-Discoveries</title>
+    
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/sidebar-left.css">
+    <link rel="stylesheet" href="css/feed-gallery.css">
+    <link rel="stylesheet" href="css/sidebar-right.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+
+    <div id="toast-container"></div>
+
+    <header class="site-header">
+        <div class="header-content">
+            <h1>Wasi-Discoveries</h1>
+            <span class="subtitle">Physics • Mathematics • Astronomy • Computer Science</span>
+        </div>
+        <div class="header-controls">
+            <select id="theme-color-picker">
+                <option value="#1877f2">Colour-1</option>
+                <option value="#2ecc71">Colour-2</option>
+                <option value="#e74c3c">Colour-3</option>
+                <option value="#9b59b6">Colour-4</option>
+            </select>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- LEFT COLUMN: Navigation Only -->
+        <aside class="sidebar-left">
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="sites/Discoveries/index.html" class="nav-link"><span class="icon">🔬</span> Discoveries</a></li>
+                    <li><a href="sites/Articles/index.html" class="nav-link"><span class="icon">📰</span> Articles</a></li>
+                    <li><a href="sites/About/index.html" class="nav-link"><span class="icon">👤</span> About</a></li>
+                    <li><a href="sites/Essay/index.html" class="nav-link"><span class="icon">✍️</span> Essays</a></li>
+                    <li><a href="sites/Findings/index.html" class="nav-link"><span class="icon">🔍</span> Findings</a></li>
+                    <li><a href="sites/Studies/index.html" class="nav-link"><span class="icon">📚</span> Studies</a></li>
+                </ul>
+            </nav>
+            <div class="footer-links">
+                <a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a> | <a href="reminders.html">Reminders</a>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+                <p>&copy; 2026 WASI-Discoveries. ALL RIGHTS RESERVED.</p>
+            </footer>
+        </aside>
+
+        <!-- MIDDLE COLUMN: Feed -->
+        <main class="feed-column">
+            <header class="feed-header">
+                <h2>Featured Works</h2>
+                <span class="subtitle">Curated scientific explorations</span>
+            </header>
+
+            <div class="controls-bar">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Discoveries">Discoveries</button>
+                    <button class="filter-btn" data-filter="Articles">Articles</button>
+                    <button class="filter-btn" data-filter="Studies">Studies</button>
+                    <button class="filter-btn" data-filter="Essays">Essays</button>
+                </div>
+                <input type="text" id="gallery-search" placeholder="Search (Under Development)....">
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Cards injected by JS -->
+            </div>
+        </main>
+
+        <!-- RIGHT COLUMN: Dashboard + Physics Lab -->
+        <aside class="sidebar-right">
+            <div class="dashboard-card">
+                <h3>System Status</h3>
+                <div class="status-indicator">
+                    <span id="connection-status" class="status-dot online"></span>
+                    <span id="status-text">Online</span>
+                </div>
+                <p class="status-desc">Service Worker Active</p>
+            </div>
+
+            <!-- Physics Lab -->
+            <div class="physics-lab-card">
+                <h3>Physics Lab</h3>
+                <div class="lab-canvas-container">
+                    <canvas id="pendulumCanvas" width="240" height="140"></canvas>
+                </div>
+                <div class="lab-controls">
+                    <label>G: <input type="range" id="gravityRange" min="5" max="50" value="20"></label>
+                    <button id="resetPendulum" class="lab-btn">Reset</button>
+                </div>
+            </div>
+
+            <div class="dashboard-card">
+                <h3>Daily Inspiration</h3>
+                <blockquote id="quote-of-day">"Science is not only a disciple of reason but also one of romance and passion."</blockquote>
+                <cite>- Stephen Hawking</cite>
+            </div>
+            
+            <div class="dashboard-card">
+                <h3>Quick Actions</h3>
+                <button id="clear-cache" class="action-btn secondary">🗑️ Clear Cache</button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Mobile Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <a href="sites/Discoveries/index.html" class="nav-item"><span>🔬</span><span>Discover</span></a>
+        <a href="sites/Articles/index.html" class="nav-item"><span>📰</span><span>Articles</span></a>
+        <a href="sites/About/index.html" class="nav-item"><span>👤</span><span>About</span></a>
+        <a href="sites/Photos/index.html" class="nav-item"><span>📷</span><span>Photos</span></a>
+    </nav>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full size">
+    </div>
+
+    <!-- NEW: Mandatory Reminder Modal -->
+    <div id="reminder-modal" class="modal-overlay">
+        <div class="modal-glass">
+            <div class="modal-header">
+                <span class="icon">⚠️</span>
+                <h2>Important Notice</h2>
+            </div>
+            <div class="modal-body">
+                <p>For using this website, you <strong>MUST</strong> agree to our <a href="reminders.html" target="_blank">Reminders & Disclaimers</a>.</p>
+                <p>If you do not agree, you cannot enter this site.</p>
+                <p class="warning-text">If you agree, you acknowledge that you are <strong>totally responsible for your actions</strong>, including any experiments or use of advanced concepts.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="reminders.html" class="btn-secondary">Read Reminders First</a>
+                <button id="agree-btn" class="btn-primary">I Agree & Enter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts (Only ONCE) -->
+    <script src="js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('js/sw.js')
+                .then(() => console.log('SW Registered'))
+                .catch(err => console.error('SW Fail:', err));
+        }
+    </script>
+</body>
+</html>
